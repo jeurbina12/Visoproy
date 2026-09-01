@@ -1,0 +1,6 @@
+E:\VSG\VC_Net\Visoproy\Common\bin\Release\Common.dll
+E:\VSG\VC_Net\Visoproy\Common\bin\Release\Common.pdb
+E:\VSG\VC_Net\Visoproy\Common\obj\Release\Common.csproj.CoreCompileInputs.cache
+E:\VSG\VC_Net\Visoproy\Common\obj\Release\Common.dll
+E:\VSG\VC_Net\Visoproy\Common\obj\Release\Common.pdb
+E:\VSG\VC_Net\Visoproy\Common\obj\Release\Common.csproj.AssemblyReference.cache

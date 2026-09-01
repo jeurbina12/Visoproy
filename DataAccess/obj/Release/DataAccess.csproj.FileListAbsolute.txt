@@ -1,0 +1,17 @@
+E:\VSG\VC_Net\Visoproy\DataAccess\bin\Release\DataAccess.dll
+E:\VSG\VC_Net\Visoproy\DataAccess\bin\Release\DataAccess.pdb
+E:\VSG\VC_Net\Visoproy\DataAccess\bin\Release\Common.dll
+E:\VSG\VC_Net\Visoproy\DataAccess\bin\Release\Mono.Security.dll
+E:\VSG\VC_Net\Visoproy\DataAccess\bin\Release\Npgsql.dll
+E:\VSG\VC_Net\Visoproy\DataAccess\bin\Release\policy.2.0.Npgsql.dll
+E:\VSG\VC_Net\Visoproy\DataAccess\bin\Release\Common.pdb
+E:\VSG\VC_Net\Visoproy\DataAccess\bin\Release\Npgsql.pdb
+E:\VSG\VC_Net\Visoproy\DataAccess\bin\Release\Npgsql.xml
+E:\VSG\VC_Net\Visoproy\DataAccess\bin\Release\policy.2.0.Npgsql.config
+E:\VSG\VC_Net\Visoproy\DataAccess\obj\Release\DataAccess.csproj.AssemblyReference.cache
+E:\VSG\VC_Net\Visoproy\DataAccess\obj\Release\Interop.AutoCAD.dll
+E:\VSG\VC_Net\Visoproy\DataAccess\obj\Release\DataAccess.csproj.ResolveComReference.cache
+E:\VSG\VC_Net\Visoproy\DataAccess\obj\Release\DataAccess.csproj.CoreCompileInputs.cache
+E:\VSG\VC_Net\Visoproy\DataAccess\obj\Release\DataAccess.dll
+E:\VSG\VC_Net\Visoproy\DataAccess\obj\Release\DataAccess.pdb
+E:\VSG\VC_Net\Visoproy\DataAccess\obj\Release\DataAccess.csproj.Up2Date

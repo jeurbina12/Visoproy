@@ -1,0 +1,12 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Presentation.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="RUTA_XML" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">C:\VSG\xml\</Value>
+    </Setting>
+    <Setting Name="MSG_CONF_FRM" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Configuración de formularios - MSc. Jesús Urbina, Septiembre/2020</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

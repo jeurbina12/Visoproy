@@ -1,0 +1,16 @@
+E:\VSG\VC_Net\Visoproy\Domain\bin\Release\Domain.dll
+E:\VSG\VC_Net\Visoproy\Domain\bin\Release\Domain.pdb
+E:\VSG\VC_Net\Visoproy\Domain\bin\Release\Common.dll
+E:\VSG\VC_Net\Visoproy\Domain\bin\Release\DataAccess.dll
+E:\VSG\VC_Net\Visoproy\Domain\bin\Release\Npgsql.dll
+E:\VSG\VC_Net\Visoproy\Domain\bin\Release\Mono.Security.dll
+E:\VSG\VC_Net\Visoproy\Domain\bin\Release\Common.pdb
+E:\VSG\VC_Net\Visoproy\Domain\bin\Release\DataAccess.pdb
+E:\VSG\VC_Net\Visoproy\Domain\bin\Release\Npgsql.pdb
+E:\VSG\VC_Net\Visoproy\Domain\bin\Release\Npgsql.xml
+E:\VSG\VC_Net\Visoproy\Domain\bin\Release\es\Microsoft.VisualBasic.PowerPacks.Vs.resources.dll
+E:\VSG\VC_Net\Visoproy\Domain\obj\Release\Domain.csproj.AssemblyReference.cache
+E:\VSG\VC_Net\Visoproy\Domain\obj\Release\Domain.csproj.CoreCompileInputs.cache
+E:\VSG\VC_Net\Visoproy\Domain\obj\Release\Domain.dll
+E:\VSG\VC_Net\Visoproy\Domain\obj\Release\Domain.pdb
+E:\VSG\VC_Net\Visoproy\Domain\obj\Release\Domain.csproj.Up2Date

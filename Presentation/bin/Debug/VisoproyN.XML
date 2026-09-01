@@ -1,0 +1,693 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>VisoproyN</name>
+    </assembly>
+    <members>
+        <member name="M:Presentation.InfGeográfica.frmCliente.ConfiguracionFormGuarda">
+            <summary>
+            Almacena la información del formulario actual en fichero XML
+            </summary>
+        </member>
+        <member name="M:Presentation.InfGeográfica.frmCliente.ConfiguracionFormLectura">
+            <summary>
+            Realiza una lectura del fichero de configuración y aplica los cambios al form
+            </summary>
+        </member>
+        <member name="F:Presentation.InfGeográfica.frmCliente.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Presentation.InfGeográfica.frmCliente.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Presentation.InfGeográfica.frmCliente.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:Presentation.InfGeográfica.frmClientes.ConfiguracionFormLectura">
+            <summary>
+            Realiza una lectura del fichero de configuración y aplica los cambios al form
+            </summary>
+        </member>
+        <member name="F:Presentation.InfGeográfica.frmClientes.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Presentation.InfGeográfica.frmClientes.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Presentation.InfGeográfica.frmClientes.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:Presentation.InfGeográfica.frmConvCoord.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Presentation.InfGeográfica.frmConvCoord.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Presentation.InfGeográfica.frmConvCoord.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:Presentation.InfGeográfica.frmCto.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Presentation.InfGeográfica.frmCto.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Presentation.InfGeográfica.frmCto.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:Presentation.InfGeográfica.frmListas.ConfiguracionFormLectura">
+            <summary>
+            Realiza una lectura del fichero de configuración y aplica los cambios al form
+            </summary>
+        </member>
+        <member name="F:Presentation.InfGeográfica.frmListas.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Presentation.InfGeográfica.frmListas.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Presentation.InfGeográfica.frmListas.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:Presentation.InfGeográfica.frmRed.components">
+            <summary>
+            Variable del diseñador requerida.
+            </summary>
+        </member>
+        <member name="M:Presentation.InfGeográfica.frmRed.Dispose(System.Boolean)">
+            <summary>
+            Limpiar los recursos que se estén utilizando.
+            </summary>
+            <param name="disposing">true si los recursos administrados se deben eliminar; false en caso contrario, false.</param>
+        </member>
+        <member name="M:Presentation.InfGeográfica.frmRed.InitializeComponent">
+            <summary>
+            Método necesario para admitir el Diseñador. No se puede modificar
+            el contenido del método con el editor de codigo.
+            </summary>
+        </member>
+        <member name="F:Presentation.InfGeográfica.frmSub.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Presentation.InfGeográfica.frmSub.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Presentation.InfGeográfica.frmSub.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:Presentation.InfGeográfica.frmLocalidad.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Presentation.InfGeográfica.frmLocalidad.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Presentation.InfGeográfica.frmLocalidad.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:Presentation.InfGeográfica.frmLocalidades.ConfiguracionFormLectura">
+            <summary>
+            Realiza una lectura del fichero de configuración y aplica los cambios al form
+            </summary>
+        </member>
+        <member name="F:Presentation.InfGeográfica.frmLocalidades.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Presentation.InfGeográfica.frmLocalidades.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Presentation.InfGeográfica.frmLocalidades.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:Presentation.InfGeográfica.frmTransf.components">
+            <summary>
+            Variable del diseñador requerida.
+            </summary>
+        </member>
+        <member name="M:Presentation.InfGeográfica.frmTransf.Dispose(System.Boolean)">
+            <summary>
+            Limpiar los recursos que se estén utilizando.
+            </summary>
+            <param name="disposing">true si los recursos administrados se deben eliminar; false en caso contrario, false.</param>
+        </member>
+        <member name="M:Presentation.InfGeográfica.frmTransf.InitializeComponent">
+            <summary>
+            Método necesario para admitir el Diseñador. No se puede modificar
+            el contenido del método con el editor de codigo.
+            </summary>
+        </member>
+        <member name="M:Presentation.InfGeográfica.frmInstalaciones.cycleChild(System.Windows.Forms.TreeNode,System.Boolean)">
+            <summary>
+            Check that all child nodes of the parent node are selected
+            </summary>
+            <param name="n">Currently selected node</param>
+            <param name="check"> is selected</param>
+        </member>
+        <member name="M:Presentation.InfGeográfica.frmInstalaciones.cycleParent(System.Windows.Forms.TreeNode,System.Boolean)">
+            <summary>
+            Traverse the parent node, if the child node is selected, all are selected, if the child node is not selected, the parent node is not selected.
+            </summary>
+            <param name="n"></param>
+            <param name="check"></param>
+        </member>
+        <member name="M:Presentation.InfGeográfica.frmInstalaciones.nextCheck(System.Windows.Forms.TreeNode)">
+            <summary>
+            Determine if the pass node is fully selected
+            </summary>
+            <param name="n"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Presentation.InfGeográfica.frmInstalaciones.ConfiguracionFormLectura">
+            <summary>
+            Realiza una lectura del fichero de configuración y aplica los cambios al form
+            </summary>
+        </member>
+        <member name="F:Presentation.InfGeográfica.frmInstalaciones.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Presentation.InfGeográfica.frmInstalaciones.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Presentation.InfGeográfica.frmInstalaciones.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:Presentation.frmPrincipal.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Presentation.frmPrincipal.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Presentation.frmPrincipal.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:Presentation.Properties.Resources">
+            <summary>
+              Clase de recurso fuertemente tipado, para buscar cadenas traducidas, etc.
+            </summary>
+        </member>
+        <member name="P:Presentation.Properties.Resources.ResourceManager">
+            <summary>
+              Devuelve la instancia de ResourceManager almacenada en caché utilizada por esta clase.
+            </summary>
+        </member>
+        <member name="P:Presentation.Properties.Resources.Culture">
+            <summary>
+              Reemplaza la propiedad CurrentUICulture del subproceso actual para todas las
+              búsquedas de recursos mediante esta clase de recurso fuertemente tipado.
+            </summary>
+        </member>
+        <member name="P:Presentation.Properties.Resources.application_add">
+            <summary>
+              Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Presentation.Properties.Resources.application_edit">
+            <summary>
+              Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Presentation.Properties.Resources.application_side_contract">
+            <summary>
+              Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Presentation.Properties.Resources.application_side_tree">
+            <summary>
+              Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Presentation.Properties.Resources.application_view_list">
+            <summary>
+              Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Presentation.Properties.Resources.arrow_left">
+            <summary>
+              Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Presentation.Properties.Resources.arrow_refresh_small">
+            <summary>
+              Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Presentation.Properties.Resources.arrow_right">
+            <summary>
+              Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Presentation.Properties.Resources.Barra">
+            <summary>
+              Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Presentation.Properties.Resources.Cad">
+            <summary>
+              Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Presentation.Properties.Resources.CadErase">
+            <summary>
+              Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Presentation.Properties.Resources.CadInsertBlk">
+            <summary>
+              Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Presentation.Properties.Resources.CadMarcar">
+            <summary>
+              Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Presentation.Properties.Resources.CadMarcarAll">
+            <summary>
+              Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Presentation.Properties.Resources.CadVer">
+            <summary>
+              Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Presentation.Properties.Resources.cerrar">
+            <summary>
+              Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Presentation.Properties.Resources.chart_organisation">
+            <summary>
+              Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Presentation.Properties.Resources.chart_organisation_add">
+            <summary>
+              Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Presentation.Properties.Resources.chart_organisation_delete">
+            <summary>
+              Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Presentation.Properties.Resources.Checked">
+            <summary>
+              Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Presentation.Properties.Resources.Corpoelec">
+            <summary>
+              Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Presentation.Properties.Resources.Corpoelec2">
+            <summary>
+              Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Presentation.Properties.Resources.filtro">
+            <summary>
+              Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Presentation.Properties.Resources.find">
+            <summary>
+              Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Presentation.Properties.Resources.find1">
+            <summary>
+              Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Presentation.Properties.Resources.group">
+            <summary>
+              Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Presentation.Properties.Resources.Map">
+            <summary>
+              Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Presentation.Properties.Resources.map_edit">
+            <summary>
+              Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Presentation.Properties.Resources.map_m2">
+            <summary>
+              Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Presentation.Properties.Resources.minimizar">
+            <summary>
+              Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Presentation.Properties.Resources.Minimize">
+            <summary>
+              Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Presentation.Properties.Resources.NPO4_16">
+            <summary>
+              Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Presentation.Properties.Resources.page_edit">
+            <summary>
+              Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Presentation.Properties.Resources.page_save">
+            <summary>
+              Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Presentation.Properties.Resources.page_white_find">
+            <summary>
+              Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Presentation.Properties.Resources.save_16">
+            <summary>
+              Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Presentation.Properties.Resources.SCBL_16">
+            <summary>
+              Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Presentation.Properties.Resources.SelectBlkTx">
+            <summary>
+              Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Presentation.Properties.Resources.seo1">
+            <summary>
+              Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Presentation.Properties.Resources.shape_move_front">
+            <summary>
+              Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Presentation.Properties.Resources.Sub115">
+            <summary>
+              Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Presentation.Properties.Resources.text_lowercase">
+            <summary>
+              Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Presentation.Properties.Resources.Unchecked">
+            <summary>
+              Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Presentation.Properties.Resources.user">
+            <summary>
+              Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Presentation.Properties.Resources.user_edit">
+            <summary>
+              Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Presentation.Properties.Resources.Users_Group">
+            <summary>
+              Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Presentation.Properties.Resources.UsuarioEditar">
+            <summary>
+              Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Presentation.Properties.Resources.Ventana">
+            <summary>
+              Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Presentation.Properties.Resources.zoom">
+            <summary>
+              Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Presentation.Properties.Resources.zoomgeo">
+            <summary>
+              Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="F:Presentation.frmLoginRecoverPassword.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Presentation.frmLoginRecoverPassword.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Presentation.frmLoginRecoverPassword.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:Presentation.frmLoginEditar.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Presentation.frmLoginEditar.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Presentation.frmLoginEditar.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:Presentation.frmLoginWelcome.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Presentation.frmLoginWelcome.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Presentation.frmLoginWelcome.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:Presentation.Sgi.frmBusqueda.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Presentation.Sgi.frmBusqueda.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Presentation.Sgi.frmBusqueda.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:Presentation.Sgi.frmIncidencias.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Presentation.Sgi.frmIncidencias.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Presentation.Sgi.frmIncidencias.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:Presentation.Sgi.MDIParentPrincipal.components">
+            <summary>
+            Variable del diseñador requerida.
+            </summary>
+        </member>
+        <member name="M:Presentation.Sgi.MDIParentPrincipal.Dispose(System.Boolean)">
+            <summary>
+            Limpiar los recursos que se estén utilizando.
+            </summary>
+            <param name="disposing">true si los recursos administrados se deben eliminar; false en caso contrario, false.</param>
+        </member>
+        <member name="M:Presentation.Sgi.MDIParentPrincipal.InitializeComponent">
+            <summary>
+            Método necesario para admitir el Diseñador. No se puede modificar
+            el contenido del método con el editor de código.
+            </summary>
+        </member>
+        <member name="F:Presentation.Sgi.frmIncidencia.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Presentation.Sgi.frmIncidencia.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Presentation.Sgi.frmIncidencia.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:Presentation.Program.Main">
+            <summary>
+            Punto de entrada principal para la aplicación.
+            </summary>
+        </member>
+        <member name="F:Presentation.FrmAcerca.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Presentation.FrmAcerca.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Presentation.FrmAcerca.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:Presentation.Util.Fun.GetValor(System.Xml.XmlNode,System.String)">
+            <summary>
+            Obtiene el valor de la clave
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:Presentation.Util.FunBase.NodoValor(System.Xml.XmlDocument,System.Xml.XmlNode,System.String,System.Object)" -->
+        <member name="F:FormLogin.frmLogin.components">
+            <summary>
+            Variable del diseñador necesaria.
+            </summary>
+        </member>
+        <member name="M:FormLogin.frmLogin.Dispose(System.Boolean)">
+            <summary>
+            Limpiar los recursos que se estén usando.
+            </summary>
+            <param name="disposing">true si los recursos administrados se deben desechar; false en caso contrario.</param>
+        </member>
+        <member name="M:FormLogin.frmLogin.InitializeComponent">
+            <summary>
+            Método necesario para admitir el Diseñador. No se puede modificar
+            el contenido de este método con el editor de código.
+            </summary>
+        </member>
+    </members>
+</doc>

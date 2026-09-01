@@ -1,0 +1,492 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A409EDB1-365C-438F-858D-BA4563DD4A57}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Presentation</RootNamespace>
+    <AssemblyName>VisoproyN</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>C:\VSG\publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Background</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>false</MapFileExtensions>
+    <UpdateUrl>http://localhost/VisoproyN/</UpdateUrl>
+    <TargetCulture>es-VE</TargetCulture>
+    <ProductName>Visoproy</ProductName>
+    <PublisherName>Editor Visoproy</PublisherName>
+    <OpenBrowserOnPublish>false</OpenBrowserOnPublish>
+    <AutorunEnabled>true</AutorunEnabled>
+    <ApplicationRevision>10</ApplicationRevision>
+    <ApplicationVersion>1.0.0.10</ApplicationVersion>
+    <UseApplicationTrust>true</UseApplicationTrust>
+    <CreateDesktopShortcut>true</CreateDesktopShortcut>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <BootstrapperComponentsLocation>Absolute</BootstrapperComponentsLocation>
+    <BootstrapperComponentsUrl>\\100.1.1.17\Visoproy\instalador</BootstrapperComponentsUrl>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\VisoproyN.XML</DocumentationFile>
+    <Prefer32Bit>false</Prefer32Bit>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisIgnoreGeneratedCode>false</CodeAnalysisIgnoreGeneratedCode>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Icon_VisoProy.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>Presentation.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>B5C220381EC81146F32CD1249027B93E64F96A77</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>Presentation_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>firma.pfx</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualBasic, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\VisualBasic.PowerPacks.Vs.1.0.0\lib\Microsoft.VisualBasic.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\VisualBasic.PowerPacks.Vs.1.0.0\lib\Microsoft.VisualBasic.PowerPacks.Vs.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Deployment">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="InfGeogr?fica\frmCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InfGeogr?fica\frmCliente.designer.cs">
+      <DependentUpon>frmCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InfGeogr?fica\frmClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InfGeogr?fica\frmClientes.Designer.cs">
+      <DependentUpon>frmClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InfGeogr?fica\frmConvCoord.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InfGeogr?fica\frmConvCoord.Designer.cs">
+      <DependentUpon>frmConvCoord.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InfGeogr?fica\frmCto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InfGeogr?fica\frmCto.Designer.cs">
+      <DependentUpon>frmCto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InfGeogr?fica\frmListas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InfGeogr?fica\frmListas.Designer.cs">
+      <DependentUpon>frmListas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InfGeogr?fica\frmRed.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InfGeogr?fica\frmRed.designer.cs">
+      <DependentUpon>frmRed.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InfGeogr?fica\frmSub.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InfGeogr?fica\frmSub.designer.cs">
+      <DependentUpon>frmSub.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InfGeogr?fica\frmLocalidad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InfGeogr?fica\frmLocalidad.designer.cs">
+      <DependentUpon>frmLocalidad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InfGeogr?fica\frmLocalidades.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InfGeogr?fica\frmLocalidades.Designer.cs">
+      <DependentUpon>frmLocalidades.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPrincipal.designer.cs">
+      <DependentUpon>frmPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InfGeogr?fica\frmTransf.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InfGeogr?fica\frmTransf.designer.cs">
+      <DependentUpon>frmTransf.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Settings.cs" />
+    <Compile Include="InfGeogr?fica\frmInstalaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InfGeogr?fica\frmInstalaciones.Designer.cs">
+      <DependentUpon>frmInstalaciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login\frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login\frmLogin.designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login\frmLoginRecoverPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login\frmLoginRecoverPassword.Designer.cs">
+      <DependentUpon>frmLoginRecoverPassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login\frmLoginEditar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login\frmLoginEditar.designer.cs">
+      <DependentUpon>frmLoginEditar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login\frmLoginWelcome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login\frmLoginWelcome.designer.cs">
+      <DependentUpon>frmLoginWelcome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sgi\frmBusqueda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sgi\frmBusqueda.Designer.cs">
+      <DependentUpon>frmBusqueda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sgi\frmIncidencias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sgi\frmIncidencias.Designer.cs">
+      <DependentUpon>frmIncidencias.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sgi\MDIParentPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sgi\MDIParentPrincipal.Designer.cs">
+      <DependentUpon>MDIParentPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="frmAcerca.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAcerca.Designer.cs">
+      <DependentUpon>frmAcerca.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sgi\frmIncidencia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sgi\frmIncidencia.Designer.cs">
+      <DependentUpon>frmIncidencia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Util\CbxLista.cs" />
+    <Compile Include="Util\Fun.cs" />
+    <Compile Include="Util\FunBase.cs" />
+    <EmbeddedResource Include="InfGeogr?fica\frmCliente.resx">
+      <DependentUpon>frmCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InfGeogr?fica\frmClientes.resx">
+      <DependentUpon>frmClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InfGeogr?fica\frmConvCoord.resx">
+      <DependentUpon>frmConvCoord.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InfGeogr?fica\frmCto.resx">
+      <DependentUpon>frmCto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InfGeogr?fica\frmListas.resx">
+      <DependentUpon>frmListas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InfGeogr?fica\frmRed.resx">
+      <DependentUpon>frmRed.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InfGeogr?fica\frmSub.resx">
+      <DependentUpon>frmSub.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InfGeogr?fica\frmLocalidad.resx">
+      <DependentUpon>frmLocalidad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InfGeogr?fica\frmLocalidades.resx">
+      <DependentUpon>frmLocalidades.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPrincipal.resx">
+      <DependentUpon>frmPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InfGeogr?fica\frmInstalaciones.resx">
+      <DependentUpon>frmInstalaciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InfGeogr?fica\frmTransf.resx">
+      <DependentUpon>frmTransf.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login\frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login\frmLoginRecoverPassword.resx">
+      <DependentUpon>frmLoginRecoverPassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login\frmLoginEditar.resx">
+      <DependentUpon>frmLoginEditar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login\frmLoginWelcome.resx">
+      <DependentUpon>frmLoginWelcome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sgi\frmBusqueda.resx">
+      <DependentUpon>frmBusqueda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sgi\frmIncidencias.resx">
+      <DependentUpon>frmIncidencias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sgi\MDIParentPrincipal.resx">
+      <DependentUpon>MDIParentPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAcerca.resx">
+      <DependentUpon>frmAcerca.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sgi\frmIncidencia.resx">
+      <DependentUpon>frmIncidencia.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="firma.pfx" />
+    <None Include="packages.config" />
+    <None Include="Presentation_TemporaryKey.pfx" />
+    <None Include="Properties\app.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Common\Common.csproj">
+      <Project>{E0F52088-4B10-4E32-8FAB-B98E6D5DF71A}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Domain\Domain.csproj">
+      <Project>{122C6F90-714C-43CA-8AB6-FB4EC7832E52}</Project>
+      <Name>Domain</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Map.png" />
+    <None Include="Resources\SelectBlkTx.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cad.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ventana.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CadVer.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\application_add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\application_edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\zoom-geo.BMP" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\application_side_tree.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\application_side_contract.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow_refresh_small.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\zoom.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\page_white_find.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chart_organisation.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Electricidad_40.GIF" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CadMarcar.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Checked.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Unchecked.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CadMarcarAll.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CadErase.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\find.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Users_Group.png" />
+    <None Include="Resources\text_lowercase.png" />
+    <None Include="Resources\Sub115.bmp" />
+    <None Include="Resources\user_edit.png" />
+    <None Include="Resources\Minimize.png" />
+    <None Include="Resources\logout %281%291.png" />
+    <None Include="Resources\person-settings1.png" />
+    <None Include="Resources\seo1.png" />
+    <None Include="Resources\user.png" />
+    <None Include="Resources\page_edit.png" />
+    <None Include="Resources\page_save.png" />
+    <None Include="Resources\minimizar.jpg" />
+    <None Include="Resources\map_m2.png" />
+    <None Include="Resources\map_edit.png" />
+    <None Include="Resources\shape_move_front.png" />
+    <None Include="Resources\NPO4_16.BMP" />
+    <None Include="Resources\SCBL_16.BMP" />
+    <None Include="Resources\chart_organisation_delete.png" />
+    <None Include="Resources\bring-to-front.png" />
+    <None Include="Resources\find.gif" />
+    <Content Include="Icon_VisoProy.ico" />
+    <None Include="Resources\arrow_left.png" />
+    <None Include="Resources\arrow_right.png" />
+    <None Include="Resources\group.png" />
+    <None Include="Resources\Corpoelec.jpg" />
+    <None Include="Resources\97337_w40_h40_jpg_karohe_200_titulo_jpg.jpg" />
+    <None Include="Resources\Corpoelec2.jpg" />
+    <None Include="Resources\CadInsertBlk.bmp" />
+    <None Include="Resources\chart_organisation_add.png" />
+    <None Include="Resources\cerrar.jpg" />
+    <None Include="Resources\filtro.bmp" />
+    <None Include="Resources\Barra.bmp" />
+    <None Include="Resources\application_view_list.png" />
+    <Content Include="Resources\Icon_VisoProy2.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="stdole">
+      <Guid>{00020430-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
