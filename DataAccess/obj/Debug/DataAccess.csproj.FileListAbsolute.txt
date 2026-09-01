@@ -30,7 +30,6 @@ E:\VSG\VC_Net\Visoproy_151122\DataAccess\obj\Debug\DataAccess.csproj.CopyComplet
 E:\VSG\VC_Net\Visoproy_151122\DataAccess\obj\Debug\DataAccess.dll
 E:\VSG\VC_Net\Visoproy_151122\DataAccess\obj\Debug\DataAccess.pdb
 E:\VSG\VC_Net\Visoproy\DataAccess\obj\Debug\DataAccess.csproj.AssemblyReference.cache
-E:\VSG\VC_Net\Visoproy\DataAccess\obj\Debug\Interop.AutoCAD.dll
 E:\VSG\VC_Net\Visoproy\DataAccess\obj\Debug\DataAccess.csproj.ResolveComReference.cache
 E:\VSG\VC_Net\Visoproy\DataAccess\obj\Debug\DataAccess.csproj.CoreCompileInputs.cache
 E:\VSG\VC_Net\Visoproy\DataAccess\bin\Debug\DataAccess.dll

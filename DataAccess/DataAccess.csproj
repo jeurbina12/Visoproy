@@ -69,16 +69,11 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <COMReference Include="AutoCAD">
-      <Guid>{AA9A2205-75AA-43AD-9138-1767F1BB5E0C}</Guid>
-      <VersionMajor>1</VersionMajor>
-      <VersionMinor>0</VersionMinor>
-      <Lcid>0</Lcid>
-      <WrapperTool>tlbimp</WrapperTool>
-      <Isolated>False</Isolated>
+    <Reference Include="Interop.AutoCAD_A">
+      <HintPath>..\\libs\\Interop.AutoCAD_A.dll</HintPath>
       <EmbedInteropTypes>True</EmbedInteropTypes>
       <Private>True</Private>
-    </COMReference>
+    </Reference>
     <COMReference Include="stdole">
       <Guid>{00020430-0000-0000-C000-000000000046}</Guid>
       <VersionMajor>2</VersionMajor>
