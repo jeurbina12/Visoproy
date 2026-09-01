@@ -70,7 +70,7 @@
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Interop.AutoCAD_A">
-      <HintPath>..\\libs\\Interop.AutoCAD_A.dll</HintPath>
+      <HintPath>E:\\VSG\\VC_Net\\Interop\\Interop.AutoCAD_A.dll</HintPath>
       <EmbedInteropTypes>True</EmbedInteropTypes>
       <Private>True</Private>
     </Reference>
