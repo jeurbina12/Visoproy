@@ -13,6 +13,8 @@
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
+    <!-- Default interop path; override in CI with /p:InteropPath=... -->
+    <InteropPath>$(MSBuildThisFileDirectory)..\..\Interop</InteropPath>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -70,7 +72,7 @@
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Interop.AutoCAD_A">
-      <HintPath>E:\\VSG\\VC_Net\\Interop\\Interop.AutoCAD_A.dll</HintPath>
+      <HintPath>$(InteropPath)\\Interop.AutoCAD_A.dll</HintPath>
       <EmbedInteropTypes>True</EmbedInteropTypes>
       <Private>True</Private>
     </Reference>
