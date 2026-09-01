@@ -69,6 +69,10 @@
   <PropertyGroup>
     <ApplicationIcon>Icon_VisoProy.ico</ApplicationIcon>
   </PropertyGroup>
+  <!-- Default interop path; can be overridden via /p:InteropPath on MSBuild/CI -->
+  <PropertyGroup>
+    <InteropPath>$(MSBuildThisFileDirectory)..\\..\\Interop</InteropPath>
+  </PropertyGroup>
   <PropertyGroup>
     <StartupObject>Presentation.Program</StartupObject>
   </PropertyGroup>

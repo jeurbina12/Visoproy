@@ -89,6 +89,14 @@
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
+  <!-- Copy interop assembly to output after build if available -->
+  <Target Name="CopyInteropToOutput" AfterTargets="Build">
+    <PropertyGroup>
+      <_InteropFile>$(InteropPath)\Interop.AutoCAD_A.dll</_InteropFile>
+    </PropertyGroup>
+    <Message Text="Copying interop from '$(_InteropFile)' to '$(OutputPath)' if it exists" Importance="Low" />
+    <Copy SourceFiles="$(_InteropFile)" DestinationFolder="$(OutputPath)" SkipUnchangedFiles="true" Condition="Exists('$(_InteropFile)')" />
+  </Target>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
