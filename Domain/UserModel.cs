@@ -25,31 +25,11 @@ namespace Domain
         private string MAIL;
         private short ID_ESTADO;
         private short ID_GRUPO;
-        private short ID_PERFIL;
+        // ID_PERFIL removed (unused) to clean warnings
         private short ID_DPTO;
         private string TXT_OBS;
 
-        private bool BLO_PC;
-        private bool BLO_PERFIL;
-
-        private bool B1;
-        private bool B2;
-        private bool B3;
-        private bool B4;
-        private bool B5;
-        private bool B6;
-        private bool B7;
-        private bool B8;
-        private bool B9;
-        private bool B10;
-        private bool B11;
-        private bool B12;
-        private bool B13;
-        private bool B14;
-        private bool B15;
-        private bool B16;
-        private bool B17;
-        private bool B18;
+        // Removed unused flags to clean compilation warnings
 
         //Constructors
         public UserModel(int idLogin, string login, string nombre,int ci,string cargo,string telef,

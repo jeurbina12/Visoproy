@@ -11,12 +11,12 @@ namespace DataAccess.PostgreSQL
     public class TreeviewDao : ConnectionToPool
     {
         // Wrappers to expose ConnectionToPool helpers in case of resolution issues
-        public int ValidarName(string sql)
+        public new int ValidarName(string sql)
         {
             return base.ValidarName(sql);
         }
 
-        public string NombreTabla(Int16 id_icono)
+        public new string NombreTabla(Int16 id_icono)
         {
             return base.NombreTabla(id_icono);
         }
