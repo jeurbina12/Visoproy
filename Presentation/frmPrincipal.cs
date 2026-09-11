@@ -13,6 +13,8 @@ using Presentation.Util;
 using System.Collections;
 using Presentation.InfGeográfica;
 using Presentation.Sgi;
+using System.IO;
+using System.Linq;
 
 namespace Presentation
 {
@@ -20,6 +22,8 @@ namespace Presentation
     public partial class frmPrincipal : Form
 #pragma warning restore CS1591 // Falta el comentario XML para el tipo o miembro visible públicamente
     {
+        private const string MSG_MODULE_DEV = "Módulo en desarrollo";
+        private const string MSG_ERROR_OPEN = "Error al abrir módulo: ";
         //private static SortedList formInstances = new SortedList(); // Para guardar las referencias de las instancias de los formularios
 
 #pragma warning disable CS1591 // Falta el comentario XML para el tipo o miembro visible públicamente
@@ -31,6 +35,24 @@ namespace Presentation
             //Estas lineas eliminan los parpadeos del formulario o controles en la interfaz grafica (Pero no en un 100%)
             this.SetStyle(ControlStyles.ResizeRedraw, true);
             this.DoubleBuffered = true;
+            // Tooltips para botones de la barra de título
+            try
+            {
+                var tt = new ToolTip();
+                tt.SetToolTip(this.btnCerrar, "Cerrar");
+                tt.SetToolTip(this.btnMaximizar, "Maximizar");
+                tt.SetToolTip(this.btnMinimizar, "Minimizar");
+                tt.SetToolTip(this.btnRestaurar, "Restaurar");
+                // Tooltips para botones del menú lateral (si existen)
+                tt.SetToolTip(this.btnMenu, "Menú");
+                tt.SetToolTip(this.btnMenu1, "Módulos");
+                tt.SetToolTip(this.btnMenu2, "Operaciones");
+                tt.SetToolTip(this.btnMenu3, "Ayuda");
+            }
+            catch { }
+
+            // Asegurar panelChildForm dock
+            this.panelChildForm.Dock = DockStyle.Fill;
 
         }
         //RESIZE METODO PARA REDIMENCIONAR/CAMBIAR TAMAÑO A FORMULARIO EN TIEMPO DE EJECUCION
@@ -129,114 +151,83 @@ namespace Presentation
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
 
-        //private void AbrirFormularioInPanel<MiForm>() where MiForm : Form, new()
-        //{
-            //Form formulario;
-            //formulario = panelChildForm.Controls.OfType<MiForm>().FirstOrDefault();//Busca en la colecion el formulario
-            ////si el formulario/instancia no existe
-            //if (formulario == null)
-            //{
-            //    formulario = new MiForm();
-            //    formulario.TopLevel = false;
-            //    formulario.FormBorderStyle = FormBorderStyle.None;
-            //    formulario.Dock = DockStyle.Fill;
-            //    panelChildForm.Controls.Add(formulario);
-            //    panelChildForm.Tag = formulario;
-            //    formulario.Show();
-            //    formulario.BringToFront();
-            //}
-            ////si el formulario/instancia existe
-            //else
-            //{
-            //    formulario.BringToFront();
-            //}           
-        //}
+        /// <summary>
+        /// Helper para abrir módulos (formularios) con comprobación opcional de permisos
+        /// </summary>
+        /// <param name="formType">Tipo del formulario a abrir (typeof(MiForm))</param>
+        /// <param name="permiso">Función que retorna true si el usuario tiene permiso (puede ser null)</param>
+        /// <param name="openInPanel">Si true se abre dentro de panelChildForm, si false abre como ventana y minimiza el principal</param>
+        private Form OpenModule(Type formType, Func<bool> permiso = null, bool openInPanel = false)
+        {
+            try
+            {
+                if (permiso != null && !permiso())
+                {
+                    // permiso() debe encargarse de mostrar mensaje cuando sea necesario
+                    return null;
+                }
 
-        //private void AddFormInPanel(object formHijo)
-        //{
-        //    if (this.panelChildForm.Controls.Count > 0)
-        //        this.panelChildForm.Controls.RemoveAt(0);
-        //    Form fh = formHijo as Form;
-        //    fh.TopLevel = false;
-        //    fh.FormBorderStyle = FormBorderStyle.None;
-        //    fh.Dock = DockStyle.Fill;
-        //    this.panelChildForm.Controls.Add(fh);
-        //    this.panelChildForm.Tag = fh;
-        //    fh.Show();
-        //} 
+                Form result = null;
+                if (openInPanel)
+                {
+                    result = (Form)Fun.AbrirFormularioInPanel(formType, this.panelChildForm);
+                }
+                else
+                {
+                    Form childForm = (Form)Fun.AbrirFormulario(formType, false);
+                    result = childForm;
+                    if (childForm != null)
+                    {
+                        this.WindowState = FormWindowState.Minimized;
+                        childForm.FormClosed += Logout;
+                    }
+                }
 
-        //private void openChildFormInPanel(Form childForm)
-        //{
-        //    if (activeForm != null)
-        //        activeForm.Close();
+                return result;
+            }
+            catch (Exception ex)
+            {
+                LogError(ex);
+                MessageBox.Show(MSG_ERROR_OPEN + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return null;
+            }
+        }
 
-        //    activeForm = childForm;
-        //    childForm.TopLevel = false;
-        //    childForm.FormBorderStyle = FormBorderStyle.None;
-        //    childForm.Dock = DockStyle.Fill;
-        //    panelChildForm.Controls.Add(childForm);
-        //    panelChildForm.Tag = childForm;
-        //    childForm.BringToFront();
-        //    childForm.Show();
-        //}
+        /// <summary>
+        /// Comprueba permiso y muestra mensaje estandarizado si no lo tiene
+        /// </summary>
+        /// <param name="permisoFlag">flag de permiso (UserCache.bX)</param>
+        /// <returns>true si tiene permiso</returns>
+        private bool HasPermission(bool permisoFlag)
+        {
+            if (!permisoFlag)
+            {
+                MessageBox.Show(ConfCache.MSG_NO_AUTORIZADO, "Información", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+            return true;
+        }
+
+        /// <summary>
+        /// Registra excepciones en un fichero de logs (logs/error.log)
+        /// </summary>
+        /// <param name="ex">Excepción a registrar</param>
+        private void LogError(Exception ex)
+        {
+            try
+            {
+                string dir = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "logs");
+                Directory.CreateDirectory(dir);
+                string path = Path.Combine(dir, "error.log");
+                File.AppendAllText(path, DateTime.Now.ToString("s") + " - " + ex.ToString() + Environment.NewLine);
+            }
+            catch
+            {
+                // Ignorar errores de logging para no romper la aplicación
+            }
+        }
 
 
-        //public static Form AbrirFormulario(Type type)//static
-        //{
-        //    return AbrirFormulario(type, false);
-        //}
-
-        //public static Form AbrirFormulario(Type type, bool dialog)//static
-        //{
-        //    Form formulario;
-        //    if ((formulario = (Form)formInstances[type.ToString()]) == null || formulario.IsDisposed)
-        //    {
-        //        formulario = (Form)Activator.CreateInstance(type);
-        //        formInstances[type.ToString()] = formulario;
-        //    }
-
-        //    formulario.Activate();
-           
-        //    //formulario.WindowState = FormWindowState.Normal;
-        //    //formulario.MdiParent = this;
-        //    //formulario.Text = formulario.Name + "Ventana " + childFormNumber++;
-        //    //formulario.Text = formulario.Text;
-            
-        //    if (dialog)
-        //        formulario.ShowDialog();
-        //    else
-        //        formulario.Show();
-
-        //    return formulario;
-        //}
-
-        //public Form AbrirFormularioInPanel(Type type)//static
-        //{
-        //    Form formulario;
-        //    if ((formulario = (Form)formInstances[type.ToString()]) == null || formulario.IsDisposed)
-        //    {
-        //        formulario = (Form)Activator.CreateInstance(type);
-        //        formInstances[type.ToString()] = formulario;
-
-        //        //formulario = new MiForm();
-        //        formulario.TopLevel = false;
-        //        formulario.FormBorderStyle = FormBorderStyle.None;
-        //        formulario.Dock = DockStyle.Fill;
-        //        panelChildForm.Controls.Add(formulario);
-        //        panelChildForm.Tag = formulario;
-        //        formulario.Show();
-                
-        //    }
-
-        //    formulario.Activate();
-        //    formulario.BringToFront();
-        //    //formulario.WindowState = FormWindowState.Normal;
-        //    //formulario.MdiParent = this;
-        //    //formulario.Text = formulario.Name + "Ventana " + childFormNumber++;
-        //    //formulario.Text = formulario.Text;          
-
-        //    return formulario;
-        //}
 
         private void Logout(object sender, FormClosedEventArgs e)
         {
@@ -413,20 +404,7 @@ namespace Presentation
 
         private void btnSubMenu2_1_Click(object sender, EventArgs e)
         {
-            if (!UserCache.b2)
-            {
-                 MessageBox.Show(ConfCache.MSG_NO_AUTORIZADO,"Información", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                 return;                
-            }
-
-            //frmInstalaciones childForm = (frmInstalaciones)Fun.AbrirFormularioInPanel(typeof(frmInstalaciones), this.panelChildForm);
-
-            //openChildFormInPanel(new FormUserProfile());
-            frmInstalaciones childForm = (frmInstalaciones)Fun.AbrirFormulario(typeof(frmInstalaciones), false);            
-            //this.ShowInTaskbar
-            this.WindowState = FormWindowState.Minimized;
-           
-            childForm.FormClosed += Logout;
+            OpenModule(typeof(frmInstalaciones), () => HasPermission(UserCache.b2), true);
             //..
             //your codes
             //..
@@ -435,30 +413,12 @@ namespace Presentation
 
         private void btnSubMenu1_2_Click(object sender, EventArgs e)
         {
-            //openChildFormInPanel(new frmAcerca("Visoproy", "jeurbina1210@gmail.com"));
-            //frmAcerca childForm = (frmAcerca)AbrirFormularioInPanel(typeof(frmAcerca));
-            FrmAcerca childForm = (FrmAcerca)Fun.AbrirFormularioInPanel(typeof(FrmAcerca), this.panelChildForm);
-            //AbrirFormularioInPanel<frmAcerca>();
-            //openChildFormInPanel(new frmAcerca());
-                  //childForm = (frmInstalaciones)AbrirVentana(typeof(frmInstalaciones), false);
-            //..
-            //your codes
-            //..
-            //hideSubMenu();
+            OpenModule(typeof(FrmAcerca), null, true);
         }
 
         private void btnSubMenu2_3_Click(object sender, EventArgs e)
         {
-            if (!UserCache.b18)
-            {
-                MessageBox.Show(ConfCache.MSG_NO_AUTORIZADO, "Información", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-
-            frmLocalidades childForm = (frmLocalidades)Fun.AbrirFormulario(typeof(frmLocalidades), false);
-            this.WindowState = FormWindowState.Minimized;
-
-            childForm.FormClosed += Logout;
+            OpenModule(typeof(frmLocalidades), () => HasPermission(UserCache.b18), true);
             //this.TopLevel = false;
 
 
@@ -475,16 +435,7 @@ namespace Presentation
 
         private void btnSubMenu2_4_Click(object sender, EventArgs e)
         {
-            if (!UserCache.b18)
-            {
-                MessageBox.Show(ConfCache.MSG_NO_AUTORIZADO, "Información", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-
-            frmClientes childForm = (frmClientes)Fun.AbrirFormulario(typeof(frmClientes), false);
-            this.WindowState = FormWindowState.Minimized;
-
-            childForm.FormClosed += Logout;
+            OpenModule(typeof(frmClientes), () => HasPermission(UserCache.b18), true);
             //this.TopLevel = false;
 
 
@@ -496,13 +447,13 @@ namespace Presentation
 
         private void btnSubMenu3_1_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Módulo en desarrollo", "Información", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            MessageBox.Show(MSG_MODULE_DEV, "Información", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             return;
         }
 
         private void btnSubMenu3_2_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Módulo en desarrollo", "Información", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            MessageBox.Show(MSG_MODULE_DEV, "Información", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             return;
 
 #pragma warning disable CS0162 // Se detectó código inaccesible
@@ -513,10 +464,7 @@ namespace Presentation
                 return;
             }
 
-            frmIncidencias childForm = (frmIncidencias)Fun.AbrirFormulario(typeof(frmIncidencias), false);
-            this.WindowState = FormWindowState.Minimized;
-
-            childForm.FormClosed += Logout;
+            OpenModule(typeof(frmIncidencias), () => HasPermission(UserCache.b18), true);
         }
 
        
