@@ -550,9 +550,8 @@ namespace Presentation.InfGeográfica
             frmCto.ZOOM = 5;
             CtoModel.ID = Int16.Parse(txtId.Text);
 
-            frmCto f_cto = (frmCto)Fun.AbrirFormulario(typeof(frmCto), true);
-                        
-            this.TopLevel = true;
+            UIHelpers.OpenModule(this, typeof(frmCto), null, true);
+
 
         }
 

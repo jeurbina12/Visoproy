@@ -909,10 +909,8 @@ namespace Presentation.InfGeográfica
             LocModel.ACTUALIZACION = System.Convert.ToDateTime(dt_fila.Rows[0]["actualización"]);//System.Convert.ToDateTime(
             LocModel.USUARIO = dt_fila.Rows[0]["usuario"].ToString();
 
-            frmLocalidad f_localidad = (frmLocalidad)Fun.AbrirFormulario(typeof(frmLocalidad), true);
+            UIHelpers.OpenModule(this, typeof(frmLocalidad), null, true);
 
-            //f_localidad.FormClosed += Logout;
-            this.TopLevel = true;
         }
 
         private void mnuBuscarCad_Click(object sender, EventArgs e)

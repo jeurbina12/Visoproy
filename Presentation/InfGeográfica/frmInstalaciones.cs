@@ -2203,18 +2203,8 @@ namespace Presentation.InfGeográfica
 
         private void mnuEditorArbol_Click(object sender, EventArgs e)
         {
-            this.TopLevel = false;
-
-            //Fun.FormularioCerrar(typeof(frmSub));
-            //Fun.FormularioCerrar(typeof(frmTransf));
-            //Fun.FormularioCerrar(typeof(frmCto));
-
-            frmRed f_Arbol = (frmRed)Fun.AbrirFormulario(typeof(frmRed), true);
-
-            
-
-            //f_localidad.FormClosed += Logout;
-            this.TopLevel = true;
+            // intentar abrir el arbol en panel si está disponible
+            UIHelpers.OpenModule(this, typeof(frmRed), null, true);
         }
 
         private void AbrirPanel(bool b_panel)
@@ -2382,9 +2372,7 @@ namespace Presentation.InfGeográfica
 
         private void mnuConvCoor_Click(object sender, EventArgs e)
         {
-            this.TopLevel = false;
-            frmConvCoord f_ConvCoord = (frmConvCoord)Fun.AbrirFormulario(typeof(frmConvCoord), true);
-            this.TopLevel = true;
+            UIHelpers.OpenModule(this, typeof(frmConvCoord), null, true);
 
             
         }

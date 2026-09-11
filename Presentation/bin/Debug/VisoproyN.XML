@@ -242,6 +242,27 @@
             the contents of this method with the code editor.
             </summary>
         </member>
+        <member name="M:Presentation.frmPrincipal.OpenModule(System.Type,System.Func{System.Boolean},System.Boolean)">
+            <summary>
+            Helper para abrir módulos (formularios) con comprobación opcional de permisos
+            </summary>
+            <param name="formType">Tipo del formulario a abrir (typeof(MiForm))</param>
+            <param name="permiso">Función que retorna true si el usuario tiene permiso (puede ser null)</param>
+            <param name="openInPanel">Si true se abre dentro de panelChildForm, si false abre como ventana y minimiza el principal</param>
+        </member>
+        <member name="M:Presentation.frmPrincipal.HasPermission(System.Boolean)">
+            <summary>
+            Comprueba permiso y muestra mensaje estandarizado si no lo tiene
+            </summary>
+            <param name="permisoFlag">flag de permiso (UserCache.bX)</param>
+            <returns>true si tiene permiso</returns>
+        </member>
+        <member name="M:Presentation.frmPrincipal.LogError(System.Exception)">
+            <summary>
+            Registra excepciones en un fichero de logs (logs/error.log)
+            </summary>
+            <param name="ex">Excepción a registrar</param>
+        </member>
         <member name="F:Presentation.frmPrincipal.components">
             <summary>
             Required designer variable.
@@ -672,6 +693,17 @@
             </summary>
         </member>
         <!-- Badly formed XML comment ignored for member "M:Presentation.Util.FunBase.NodoValor(System.Xml.XmlDocument,System.Xml.XmlNode,System.String,System.Object)" -->
+        <member name="M:Presentation.Util.UIHelpers.HasPermission(System.Boolean)">
+            <summary>
+            Comprueba permiso y muestra mensaje estandarizado
+            </summary>
+        </member>
+        <member name="M:Presentation.Util.UIHelpers.OpenModule(System.Windows.Forms.Form,System.Type,System.Func{System.Boolean},System.Boolean)">
+            <summary>
+            Intenta abrir el formulario. Si el owner tiene un Panel llamado panelChildForm lo abrirá dentro de él.
+            Si no, abrirá el formulario normalmente (no modal) y suscribirá al método Logout del owner si existe.
+            </summary>
+        </member>
         <member name="F:FormLogin.frmLogin.components">
             <summary>
             Variable del diseñador necesaria.

@@ -269,6 +269,7 @@
     <Compile Include="Util\CbxLista.cs" />
     <Compile Include="Util\Fun.cs" />
     <Compile Include="Util\FunBase.cs" />
+    <Compile Include="Util\UIHelpers.cs" />
     <EmbeddedResource Include="InfGeogr?fica\frmCliente.resx">
       <DependentUpon>frmCliente.cs</DependentUpon>
     </EmbeddedResource>

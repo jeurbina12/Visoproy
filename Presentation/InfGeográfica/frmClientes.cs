@@ -839,11 +839,7 @@ namespace Presentation.InfGeográfica
             }
             frmCliente.ZOOM = cadModel.ZOOM;
             frmCliente.ID = Int32.Parse(txtId.Text);
-            this.TopLevel = false;
-
-            frmCliente f_cliente = (frmCliente)Fun.AbrirFormulario(typeof(frmCliente), true);
-   
-            this.TopLevel = true;
+            UIHelpers.OpenModule(this, typeof(frmCliente), null, true);
         }
 
         private void mnuBuscarCad_Click(object sender, EventArgs e)

@@ -413,11 +413,8 @@ namespace Presentation.InfGeográfica
             frmSub.ZOOM = 20;
             frmSub.ONPANEL = false;
             SubModel.ID = Int16.Parse(txtIdSE.Text);            
-            this.TopLevel = false;
-
-            frmSub f_sub = (frmSub)Fun.AbrirFormulario(typeof(frmSub), true);
+            UIHelpers.OpenModule(this, typeof(frmSub), null, true);
             //f_sub.CargarSE(txtIdSE.Text);
-            this.TopLevel = true;              
             
         }
 
@@ -431,11 +428,8 @@ namespace Presentation.InfGeográfica
             frmTransf.ZOOM = 10;
             frmSub.ONPANEL = false;
             TransfModel.ID = Int16.Parse(txtIdBarra.Text);
-            this.TopLevel = false;
-
-            frmTransf f_transf = (frmTransf)Fun.AbrirFormulario(typeof(frmTransf), true);
+            UIHelpers.OpenModule(this, typeof(frmTransf), null, true);
             //f_transf.Cargar(txtIdBarra.Text);
-            this.TopLevel = true;
             //if (txtIdBarra.Text == "")
             //{
             //    MessageBox.Show("No hay Transformador asignado", "proyecto sin transformador", MessageBoxButtons.OK, MessageBoxIcon.Stop);
@@ -469,9 +463,8 @@ namespace Presentation.InfGeográfica
             frmCto.ZOOM = 5;
             frmSub.ONPANEL = false;
             CtoModel.ID = Int16.Parse(txtIdCto.Text);
-            this.TopLevel = false;
-            frmCto f_cto = (frmCto)Fun.AbrirFormulario(typeof(frmCto), true); 
-            this.TopLevel = true;
+            UIHelpers.OpenModule(this, typeof(frmCto), null, true);
+
 
             //if (txtIdCto.Text == "")
             //{
