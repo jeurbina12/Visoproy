@@ -290,7 +290,7 @@ namespace Presentation.InfGeográfica
         {
             frmCliente.ZOOM = cadModel.ZOOM;
 
-            this.TopLevel = false;
+            // Intentar abrir el formulario en el panel si está disponible
 
             DataGridViewRow dgv_selecc = dgvDatos.Rows[e.RowIndex];
 
@@ -307,9 +307,8 @@ namespace Presentation.InfGeográfica
             //LocCache.ACTUALIZACION = System.Convert.ToDateTime(dgv_selecc.Cells["actualización"].Value);//System.Convert.ToDateTime(
             //LocCache.USUARIO = dgv_selecc.Cells["usuario"].Value.ToString();
 
-            frmCliente f_cliente = (frmCliente)Fun.AbrirFormulario(typeof(frmCliente), false);
+            UIHelpers.OpenModule(this, typeof(frmCliente), null, true);
 
-           
             //if (frmLocalidad.B_GUARDO)
             //{
             //    dgv_selecc.Cells["área"].Value = LocCache.AREA;
@@ -320,7 +319,6 @@ namespace Presentation.InfGeográfica
             //    dgv_selecc.Cells["usuario"].Value = UserCache.Name;
             //    dgv_selecc.Cells["actualización"].Value = LocCache.ACTUALIZACION;
             //}
-            f_cliente.FormClosed += Logout;
 
             dgvDatos.Rows[e.RowIndex].DefaultCellStyle.BackColor = Color.DarkSlateGray;
 

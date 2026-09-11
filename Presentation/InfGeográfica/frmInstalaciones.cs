@@ -2236,10 +2236,7 @@ namespace Presentation.InfGeográfica
                     }
                     else
                     {
-                        this.TopLevel = false;
-                        frmSub f_sub = (frmSub)Fun.AbrirFormulario(typeof(frmSub), false);
-                        //f_sub.CargarSE(node.Name);
-                        f_sub.FormClosed += Logout;
+                        UIHelpers.OpenModule(this, typeof(frmSub), null, true);
                     }
                     break;
                 case 2:
@@ -2253,10 +2250,7 @@ namespace Presentation.InfGeográfica
                          }
                     else
                     {
-                        this.TopLevel = false;
-                        frmTransf f_transf = (frmTransf)Fun.AbrirFormulario(typeof(frmTransf), false);
-                        //f_transf.Cargar(node.Name);
-                        f_transf.FormClosed += Logout;
+                        UIHelpers.OpenModule(this, typeof(frmTransf), null, true);
                     }
                     break;
                 case 3:
@@ -2270,10 +2264,7 @@ namespace Presentation.InfGeográfica
                            }
                     else
                     {
-                        this.TopLevel = false;
-                        frmCto f_cto = (frmCto)Fun.AbrirFormulario(typeof(frmCto), false);
-                        //f_cto.Cargar(node.Name);
-                        f_cto.FormClosed += Logout;
+                        UIHelpers.OpenModule(this, typeof(frmCto), null, true);
                     }
                     break;
                 default:
@@ -2283,12 +2274,7 @@ namespace Presentation.InfGeográfica
                         string nombre = treeviewModel.SelectNombre(int.Parse(node.Name), Int16.Parse(node.ImageIndex.ToString()));
                         if (!nombre.Equals(null))
                         {
-                            this.TopLevel = false;
-                            frmClientes f_clientes = (frmClientes)Fun.AbrirFormulario(typeof(frmClientes), false);
-                            f_clientes.cbxFiltro.Text = "Poste";
-                            f_clientes.cbx_ltaVariable.Text = nombre;
-                            f_clientes.btnFiltrar.PerformClick();
-                            f_clientes.FormClosed += Logout;
+                            UIHelpers.OpenModule(this, typeof(frmClientes), null, true);
                             //this.WindowState = FormWindowState.Minimized;
                         }
                     }

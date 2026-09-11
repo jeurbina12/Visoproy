@@ -394,10 +394,7 @@ namespace Presentation
                 return;
             }
 
-            frmListas childForm = (frmListas)Fun.AbrirFormulario(typeof(frmListas), false);
-            this.WindowState = FormWindowState.Minimized;
-
-            childForm.FormClosed += Logout;
+            UIHelpers.OpenModule(this, typeof(frmListas), () => UIHelpers.HasPermission(UserCache.b18), true);
         }
 
         

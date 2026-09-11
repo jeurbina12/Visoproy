@@ -495,18 +495,15 @@ namespace Presentation.InfGeográfica
         }
         private void dgvDatos_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            this.TopLevel = false;
+            // abrir en panel si es posible
 
             DataGridViewRow dgv_selecc = dgvDatos.Rows[e.RowIndex];           
 
             frmCto.ZOOM = 5;
             CtoModel.ID = Int16.Parse(dgv_selecc.Cells["id"].Value.ToString());
             
-            frmCto f_cto = (frmCto)Fun.AbrirFormulario(typeof(frmCto), false);
-
+            // apertura manejada por UIHelpers; el cierre se gestiona si procede
             dgvDatos.Rows[e.RowIndex].DefaultCellStyle.BackColor = Color.DarkSlateGray;
-
-            f_cto.FormClosed += Logout;
 
         }
 

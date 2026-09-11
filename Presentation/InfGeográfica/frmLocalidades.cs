@@ -365,7 +365,7 @@ namespace Presentation.InfGeográfica
         {
             frmLocalidad.ZOOM = cadModel.ZOOM;
 
-            this.TopLevel = false;
+            // intentar abrir en panel si está disponible
 
             DataGridViewRow dgv_selecc = dgvDatos.Rows[e.RowIndex];
 
@@ -382,7 +382,7 @@ namespace Presentation.InfGeográfica
             LocModel.ACTUALIZACION = System.Convert.ToDateTime(dgv_selecc.Cells["actualización"].Value);//System.Convert.ToDateTime(
             LocModel.USUARIO = dgv_selecc.Cells["usuario"].Value.ToString();
 
-            frmLocalidad f_localida = (frmLocalidad)Fun.AbrirFormulario(typeof(frmLocalidad), false);
+            UIHelpers.OpenModule(this, typeof(frmLocalidad), null, true);
 
             //this.TopLevel = true;
             if (frmLocalidad.B_GUARDO)
@@ -399,7 +399,7 @@ namespace Presentation.InfGeográfica
 
             dgvDatos.Rows[e.RowIndex].DefaultCellStyle.BackColor = Color.DarkSlateGray;
 
-            f_localida.FormClosed += Logout;
+            // el cierre del formulario es manejado por UIHelpers si procede
 
             if (mnuActZoom.Checked)
                 mnuCadMostrar.PerformClick();
