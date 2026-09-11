@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using DataAccess.PostgreSQL;
+using Visoproy.DataAccess.PostgreSQL;
 using DataAccess.AutoCad;
 using System.Data;
 //using Common;

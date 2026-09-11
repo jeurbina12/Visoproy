@@ -87,6 +87,8 @@
             this.lblSerie = new System.Windows.Forms.Label();
             this.tabDirección = new System.Windows.Forms.TabPage();
             this.grpDirección = new System.Windows.Forms.GroupBox();
+            this.txtPostal = new System.Windows.Forms.TextBox();
+            this.lblPostal = new System.Windows.Forms.Label();
             this.txtObjCon = new System.Windows.Forms.TextBox();
             this.lblObjCon = new System.Windows.Forms.Label();
             this.txtTFinca = new System.Windows.Forms.TextBox();
@@ -142,8 +144,6 @@
             this.lblNif = new System.Windows.Forms.Label();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.lblObs = new System.Windows.Forms.ToolStripLabel();
-            this.txtPostal = new System.Windows.Forms.TextBox();
-            this.lblPostal = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.tspCliente.SuspendLayout();
             this.tabControl.SuspendLayout();
@@ -210,6 +210,7 @@
             // 
             // txtId
             // 
+            this.txtId.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtId.Name = "txtId";
             this.txtId.ReadOnly = true;
             this.txtId.Size = new System.Drawing.Size(50, 25);
@@ -222,6 +223,7 @@
             // 
             // txtNombre
             // 
+            this.txtNombre.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.ReadOnly = true;
             this.txtNombre.Size = new System.Drawing.Size(300, 25);
@@ -796,6 +798,28 @@
             this.grpDirección.TabIndex = 1;
             this.grpDirección.TabStop = false;
             this.grpDirección.Text = "Dirección del Suscriptor";
+            // 
+            // txtPostal
+            // 
+            this.txtPostal.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.txtPostal.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtPostal.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPostal.Location = new System.Drawing.Point(481, 77);
+            this.txtPostal.Name = "txtPostal";
+            this.txtPostal.ReadOnly = true;
+            this.txtPostal.Size = new System.Drawing.Size(79, 13);
+            this.txtPostal.TabIndex = 114;
+            this.txtPostal.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtPostal.WordWrap = false;
+            // 
+            // lblPostal
+            // 
+            this.lblPostal.AutoSize = true;
+            this.lblPostal.Location = new System.Drawing.Point(478, 61);
+            this.lblPostal.Name = "lblPostal";
+            this.lblPostal.Size = new System.Drawing.Size(70, 13);
+            this.lblPostal.TabIndex = 113;
+            this.lblPostal.Text = "codigo postal";
             // 
             // txtObjCon
             // 
@@ -1376,28 +1400,6 @@
             this.lblObs.Size = new System.Drawing.Size(72, 20);
             this.lblObs.Text = "Notificación";
             // 
-            // txtPostal
-            // 
-            this.txtPostal.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.txtPostal.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtPostal.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPostal.Location = new System.Drawing.Point(481, 77);
-            this.txtPostal.Name = "txtPostal";
-            this.txtPostal.ReadOnly = true;
-            this.txtPostal.Size = new System.Drawing.Size(79, 13);
-            this.txtPostal.TabIndex = 114;
-            this.txtPostal.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtPostal.WordWrap = false;
-            // 
-            // lblPostal
-            // 
-            this.lblPostal.AutoSize = true;
-            this.lblPostal.Location = new System.Drawing.Point(478, 61);
-            this.lblPostal.Name = "lblPostal";
-            this.lblPostal.Size = new System.Drawing.Size(70, 13);
-            this.lblPostal.TabIndex = 113;
-            this.lblPostal.Text = "codigo postal";
-            // 
             // frmCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1412,6 +1414,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.MaximizeBox = false;
             this.Name = "frmCliente";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Datos del Suscriptor";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmCliente_FormClosing);
             this.Load += new System.EventHandler(this.frmCliente_Load);

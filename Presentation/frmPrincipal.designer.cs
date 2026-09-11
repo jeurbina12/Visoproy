@@ -559,7 +559,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MinimumSize = new System.Drawing.Size(100, 100);
             this.Name = "frmPrincipal";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Visoproy - Menu Principal";
             this.Load += new System.EventHandler(this.FormMenuPrincipal_Load);
             this.PanelContenedor.ResumeLayout(false);

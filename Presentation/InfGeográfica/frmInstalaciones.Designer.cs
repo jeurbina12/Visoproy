@@ -203,31 +203,31 @@
             this.mnuCortar,
             this.mnuPegar});
             this.contextMenuStrip.Name = "contextMenuStrip1";
-            this.contextMenuStrip.Size = new System.Drawing.Size(150, 98);
+            this.contextMenuStrip.Size = new System.Drawing.Size(151, 98);
             // 
             // mnuMostrarNodos
             // 
             this.mnuMostrarNodos.Name = "mnuMostrarNodos";
-            this.mnuMostrarNodos.Size = new System.Drawing.Size(149, 22);
+            this.mnuMostrarNodos.Size = new System.Drawing.Size(150, 22);
             this.mnuMostrarNodos.Text = "Mostrar Todos";
             this.mnuMostrarNodos.Click += new System.EventHandler(this.mnuMostrarNodos_Click);
             // 
             // mnuOcultarNodos
             // 
             this.mnuOcultarNodos.Name = "mnuOcultarNodos";
-            this.mnuOcultarNodos.Size = new System.Drawing.Size(149, 22);
+            this.mnuOcultarNodos.Size = new System.Drawing.Size(150, 22);
             this.mnuOcultarNodos.Text = "Ocultar Todos";
             this.mnuOcultarNodos.Click += new System.EventHandler(this.mnuOcultarNodos_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(146, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(147, 6);
             // 
             // mnuCortar
             // 
             this.mnuCortar.Name = "mnuCortar";
-            this.mnuCortar.Size = new System.Drawing.Size(149, 22);
+            this.mnuCortar.Size = new System.Drawing.Size(150, 22);
             this.mnuCortar.Text = "Cortar";
             this.mnuCortar.Click += new System.EventHandler(this.mnuCortar_Click);
             // 
@@ -235,7 +235,7 @@
             // 
             this.mnuPegar.Enabled = false;
             this.mnuPegar.Name = "mnuPegar";
-            this.mnuPegar.Size = new System.Drawing.Size(149, 22);
+            this.mnuPegar.Size = new System.Drawing.Size(150, 22);
             this.mnuPegar.Text = "Pegar";
             this.mnuPegar.Click += new System.EventHandler(this.mnuPegar_Click);
             // 
@@ -316,7 +316,7 @@
             this.btnZoom});
             this.tspCad.Location = new System.Drawing.Point(35, 0);
             this.tspCad.Name = "tspCad";
-            this.tspCad.Size = new System.Drawing.Size(418, 25);
+            this.tspCad.Size = new System.Drawing.Size(417, 25);
             this.tspCad.TabIndex = 0;
             this.tspCad.Text = "Barra de Herramientas";
             // 
@@ -339,35 +339,35 @@
             this.rbn1x});
             this.tsbCadMostrar.Image = global::Presentation.Properties.Resources.CadVer;
             this.tsbCadMostrar.Name = "tsbCadMostrar";
-            this.tsbCadMostrar.Size = new System.Drawing.Size(51, 22);
+            this.tsbCadMostrar.Size = new System.Drawing.Size(50, 22);
             this.tsbCadMostrar.Text = "1x";
             this.tsbCadMostrar.ButtonClick += new System.EventHandler(this.tsbCadMostrar_ButtonClick);
             // 
             // rbn4x
             // 
             this.rbn4x.Name = "rbn4x";
-            this.rbn4x.Size = new System.Drawing.Size(86, 22);
+            this.rbn4x.Size = new System.Drawing.Size(85, 22);
             this.rbn4x.Text = "4x";
             this.rbn4x.Click += new System.EventHandler(this.rbn4x_Click);
             // 
             // rbn3x
             // 
             this.rbn3x.Name = "rbn3x";
-            this.rbn3x.Size = new System.Drawing.Size(86, 22);
+            this.rbn3x.Size = new System.Drawing.Size(85, 22);
             this.rbn3x.Text = "3x";
             this.rbn3x.Click += new System.EventHandler(this.rbn3x_Click);
             // 
             // rbn2x
             // 
             this.rbn2x.Name = "rbn2x";
-            this.rbn2x.Size = new System.Drawing.Size(86, 22);
+            this.rbn2x.Size = new System.Drawing.Size(85, 22);
             this.rbn2x.Text = "2x";
             this.rbn2x.Click += new System.EventHandler(this.rbn2x_Click);
             // 
             // rbn1x
             // 
             this.rbn1x.Name = "rbn1x";
-            this.rbn1x.Size = new System.Drawing.Size(86, 22);
+            this.rbn1x.Size = new System.Drawing.Size(85, 22);
             this.rbn1x.Text = "1x";
             this.rbn1x.Click += new System.EventHandler(this.rbn1x_Click);
             // 
@@ -515,6 +515,7 @@
             // txtCodigo
             // 
             this.txtCodigo.AutoSize = false;
+            this.txtCodigo.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.Size = new System.Drawing.Size(70, 23);
             this.txtCodigo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCodigo_KeyPress);
@@ -726,7 +727,7 @@
             | System.Windows.Forms.ToolStripStatusLabelBorderSides.Bottom)));
             this.cmdContinuo.BorderStyle = System.Windows.Forms.Border3DStyle.RaisedOuter;
             this.cmdContinuo.Name = "cmdContinuo";
-            this.cmdContinuo.Size = new System.Drawing.Size(43, 19);
+            this.cmdContinuo.Size = new System.Drawing.Size(44, 19);
             this.cmdContinuo.Text = "CONT";
             this.cmdContinuo.ToolTipText = "Activar Comando Continuo";
             this.cmdContinuo.Click += new System.EventHandler(this.cmdContinuo_Click);
@@ -810,47 +811,47 @@
             // mnuTotkVAFs
             // 
             this.mnuTotkVAFs.Name = "mnuTotkVAFs";
-            this.mnuTotkVAFs.Size = new System.Drawing.Size(200, 22);
+            this.mnuTotkVAFs.Size = new System.Drawing.Size(201, 22);
             this.mnuTotkVAFs.Text = "Total kVA Afectados";
             this.mnuTotkVAFs.Click += new System.EventHandler(this.mnuTotkVAFs_Click);
             // 
             // mnuTotClientesFs
             // 
             this.mnuTotClientesFs.Name = "mnuTotClientesFs";
-            this.mnuTotClientesFs.Size = new System.Drawing.Size(200, 22);
+            this.mnuTotClientesFs.Size = new System.Drawing.Size(201, 22);
             this.mnuTotClientesFs.Text = "Total Clientes Afectados";
             this.mnuTotClientesFs.Click += new System.EventHandler(this.mnuTotClientesFs_Click);
             // 
             // mnuTotTxFs
             // 
             this.mnuTotTxFs.Name = "mnuTotTxFs";
-            this.mnuTotTxFs.Size = new System.Drawing.Size(200, 22);
+            this.mnuTotTxFs.Size = new System.Drawing.Size(201, 22);
             this.mnuTotTxFs.Text = "Total Puntos afectados";
             this.mnuTotTxFs.Click += new System.EventHandler(this.mnuTotTxFs_Click);
             // 
             // mnuTot_nTrans_Fs
             // 
             this.mnuTot_nTrans_Fs.Name = "mnuTot_nTrans_Fs";
-            this.mnuTot_nTrans_Fs.Size = new System.Drawing.Size(200, 22);
+            this.mnuTot_nTrans_Fs.Size = new System.Drawing.Size(201, 22);
             this.mnuTot_nTrans_Fs.Text = "Total # Transf Afectados";
             this.mnuTot_nTrans_Fs.Click += new System.EventHandler(this.mnuTot_nTrans_Fs_Click);
             // 
             // toolStripSeparator4
             // 
             this.toolStripSeparator4.Name = "toolStripSeparator4";
-            this.toolStripSeparator4.Size = new System.Drawing.Size(197, 6);
+            this.toolStripSeparator4.Size = new System.Drawing.Size(198, 6);
             // 
             // mnuTotHijos
             // 
             this.mnuTotHijos.Name = "mnuTotHijos";
-            this.mnuTotHijos.Size = new System.Drawing.Size(200, 22);
+            this.mnuTotHijos.Size = new System.Drawing.Size(201, 22);
             this.mnuTotHijos.Text = "Total Hijos";
             this.mnuTotHijos.Click += new System.EventHandler(this.mnuTotHijos_Click);
             // 
             // mnuParkVAFs
             // 
             this.mnuParkVAFs.Name = "mnuParkVAFs";
-            this.mnuParkVAFs.Size = new System.Drawing.Size(200, 22);
+            this.mnuParkVAFs.Size = new System.Drawing.Size(201, 22);
             this.mnuParkVAFs.Text = "Parcial kVA Afectados";
             this.mnuParkVAFs.Click += new System.EventHandler(this.mnuParkVAFs_Click);
             // 
@@ -1220,6 +1221,7 @@
             this.Controls.Add(this.statusNotif);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmInstalaciones";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Mantenimiento de Instalaciones de la Red Eléctrica";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmInstalaciones_FormClosing);
             this.Load += new System.EventHandler(this.FormInstalaciones_Load);

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using System.Data;
-using DataAccess.PostgreSQL;
+using Visoproy.DataAccess.PostgreSQL;
 
 namespace Domain
 {

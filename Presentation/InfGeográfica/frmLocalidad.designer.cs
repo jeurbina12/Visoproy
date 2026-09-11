@@ -104,6 +104,7 @@
             // 
             // txtId
             // 
+            this.txtId.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtId.Name = "txtId";
             this.txtId.ReadOnly = true;
             this.txtId.Size = new System.Drawing.Size(40, 25);
@@ -116,6 +117,7 @@
             // 
             // txtNombre
             // 
+            this.txtNombre.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.ReadOnly = true;
             this.txtNombre.Size = new System.Drawing.Size(160, 25);
@@ -454,7 +456,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "frmLocalidad";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Datos de la Localidad";
             this.Load += new System.EventHandler(this.frmLocalidad_Load);
             this.ToolStrip1.ResumeLayout(false);

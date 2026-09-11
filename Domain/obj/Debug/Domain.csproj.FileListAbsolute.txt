@@ -29,6 +29,8 @@ E:\VSG\VC_Net\Visoproy_151122\Domain\bin\Debug\es\Microsoft.VisualBasic.PowerPac
 E:\VSG\VC_Net\Visoproy_151122\Domain\obj\Debug\Domain.csproj.CopyComplete
 E:\VSG\VC_Net\Visoproy_151122\Domain\obj\Debug\Domain.dll
 E:\VSG\VC_Net\Visoproy_151122\Domain\obj\Debug\Domain.pdb
+E:\VSG\VC_Net\Visoproy\Domain\obj\Debug\Domain.csproj.AssemblyReference.cache
+E:\VSG\VC_Net\Visoproy\Domain\obj\Debug\Domain.csproj.CoreCompileInputs.cache
 E:\VSG\VC_Net\Visoproy\Domain\bin\Debug\Domain.dll.config
 E:\VSG\VC_Net\Visoproy\Domain\bin\Debug\Domain.dll
 E:\VSG\VC_Net\Visoproy\Domain\bin\Debug\Domain.pdb
@@ -40,8 +42,6 @@ E:\VSG\VC_Net\Visoproy\Domain\bin\Debug\Common.pdb
 E:\VSG\VC_Net\Visoproy\Domain\bin\Debug\DataAccess.pdb
 E:\VSG\VC_Net\Visoproy\Domain\bin\Debug\Npgsql.pdb
 E:\VSG\VC_Net\Visoproy\Domain\bin\Debug\Npgsql.xml
-E:\VSG\VC_Net\Visoproy\Domain\obj\Debug\Domain.csproj.AssemblyReference.cache
-E:\VSG\VC_Net\Visoproy\Domain\obj\Debug\Domain.csproj.CoreCompileInputs.cache
 E:\VSG\VC_Net\Visoproy\Domain\obj\Debug\Domain.csproj.Up2Date
 E:\VSG\VC_Net\Visoproy\Domain\obj\Debug\Domain.dll
 E:\VSG\VC_Net\Visoproy\Domain\obj\Debug\Domain.pdb

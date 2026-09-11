@@ -602,7 +602,8 @@ namespace Presentation.InfGeográfica
 
              Int16 _marcar=0;
              if (mnuActMarcar.Checked)  
-                _marcar = cadModel.MARCAR;            
+                _marcar = cadModel.MARCAR;     
+             
             if (cadModel.CoordZoom(SelXY[0], SelXY[1], _marcar))
             {
                 //node.BackColor = Color.Yellow;

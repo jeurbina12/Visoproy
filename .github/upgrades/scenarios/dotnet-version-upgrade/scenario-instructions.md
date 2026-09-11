@@ -2,15 +2,15 @@
 
 ## Preferences
 - **Flow Mode**: Automatic
-- **Commit Strategy**: Single Commit at End (one commit per solution)
+- **Target Framework**: net10.0 (.NET 10, LTS)
 
 ## Source Control
-- **Git repository**: Not detected on the host machine during initialization; source-control actions will be skipped unless a git repo is present.
+- **Source Branch**: master
+- **Working Branch**: upgrade-dotnet-10
+- **Pending changes**: None detected
+- **Commit Strategy**: After Each Task
+- **Branch Sync**: Auto (Merge)
 
 ## Notes
-- Objective: actualizar paquetes NuGet detectados y corregir errores de compilación en ConnToPool.cs para que la solución compile.
-- Target framework changes: none (mantener TFMs existentes: .NET 2.0 / 3.5 / 4.5.2)
-
-## Key Decisions
-- Use Automatic flow to proceed end-to-end unless blocked.
-- Use single commit per solution when git is available.
+- Solution: Visoproy.sln
+- Projects currently target .NET Framework 4.5.2

@@ -10,7 +10,7 @@ using System.Data;
 //using System.Net;
 //using System.Net.Sockets;
 
-namespace DataAccess.PostgreSQL
+namespace Visoproy.DataAccess.PostgreSQL
 {
     public abstract class ConnectionToPool
     //public class ConnectionToPool

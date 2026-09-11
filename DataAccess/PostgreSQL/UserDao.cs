@@ -5,9 +5,10 @@ using Npgsql;
 using Common.Cache;
 using NpgsqlTypes;
 using System.Data;
+using DataAccess.MailServices;
 
 
-namespace DataAccess.PostgreSQL
+namespace Visoproy.DataAccess.PostgreSQL
 {
     public class UserDao : ConnectionToPool
     {        
@@ -240,7 +241,7 @@ namespace DataAccess.PostgreSQL
                         string userMail = dr.GetString(1);
                         string accountPassword = dr.GetString(2);
 
-                        var mailService = new MailServices.SystemSupportMail();
+                        var mailService = new SystemSupportMail();
                         mailService.sendMail(
             subject: "SYSTEM: Password recovery request",
             body: "Hi, " + userName + "\nYou Requested to Recover your password.\n" +

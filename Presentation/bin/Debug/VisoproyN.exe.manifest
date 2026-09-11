@@ -51,7 +51,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>pUXJqmuLmjpAfICSSSayKm2O4vwPeZUnSafZ3ox7BKI=</dsig:DigestValue>
+        <dsig:DigestValue>dpfFOWriVMcH34USXAILLQx1qdHdVANDZ3gjUl0sFQk=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -63,7 +63,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>7IDYuscKgVKfiOiJOj6Gjtvc091mV12ARuhhGabmKCY=</dsig:DigestValue>
+        <dsig:DigestValue>7vfkR0A/96psYFYrTXZSK5OhcfHu9ekPL10QX9eu6hU=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -75,7 +75,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>FC7IEiln2AZd3DL53Hnccgx3zpdbJ4kQkh73+EoXMdE=</dsig:DigestValue>
+        <dsig:DigestValue>nqj1MprYGG/pakNNkGv1SSpwsBmNRFWE6PSB/bhvDow=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -116,14 +116,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="VisoproyN.exe" size="880640">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="VisoproyN.exe" size="881664">
       <assemblyIdentity name="VisoproyN" version="1.0.0.1" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>gwC3pZnnGYQ1alqUWv37tFvQNnyStIkCk9CjEnX+ZfA=</dsig:DigestValue>
+        <dsig:DigestValue>PUnTAimCSO3ZcxeP7J8IFWmXOj9VoBzmmm4sX+IitAA=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

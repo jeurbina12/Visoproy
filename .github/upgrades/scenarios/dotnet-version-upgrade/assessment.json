@@ -1,0 +1,168 @@
+{
+  "settings": {
+    "components": {
+      "code": true,
+      "binaries": false
+    },
+    "targetId": "net10.0",
+    "targetDisplayName": ".NETCoreApp,Version=v10.0"
+  },
+  "analysisStartTime": "2026-09-01T02:33:32.124578Z",
+  "analysisEndTime": "2026-09-01T02:33:32.4293036Z",
+  "privacyModeHelpUrl": "https://go.microsoft.com/fwlink/?linkid=2270980",
+  "stats": {
+    "summary": {
+      "projects": 1,
+      "issues": 3,
+      "incidents": 3,
+      "effort": 3
+    },
+    "charts": {
+      "severity": {
+        "Mandatory": 2,
+        "Optional": 0,
+        "Potential": 1,
+        "Information": 0
+      },
+      "category": {
+        "Project": 2,
+        "Binding": 1
+      }
+    }
+  },
+  "projects": [
+    {
+      "path": "Common\\Common.csproj",
+      "startingProject": true,
+      "issues": 3,
+      "storyPoints": 3,
+      "properties": {
+        "appName": "Common",
+        "projectKind": "ClassicClassLibrary",
+        "frameworks": [
+          "net452"
+        ],
+        "languages": [
+          "C#"
+        ],
+        "tools": [
+          "MSBuild"
+        ],
+        "isSdkStyle": false,
+        "numberOfFiles": 3,
+        "numberOfCodeFiles": 3,
+        "linesTotal": 113,
+        "linesOfCode": 113,
+        "totalApiScanned": 172,
+        "minLinesOfCodeToChange": 0,
+        "maxLinesOfCodeToChange": 0
+      },
+      "ruleInstances": [
+        {
+          "incidentId": "66ea7f59-60a4-4b69-91eb-fe23e5d787d4",
+          "ruleId": "Project.0001",
+          "projectPath": "Common\\Common.csproj",
+          "state": "Active",
+          "location": {
+            "kind": "File",
+            "path": "Common\\Common.csproj"
+          }
+        },
+        {
+          "incidentId": "16d55939-881a-4df9-96e5-f5a7f1601b11",
+          "ruleId": "Project.0002",
+          "projectPath": "Common\\Common.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Marco de destino actual: .NETFramework,Version=v4.5.2\nMarco de destino recomendado: net10.0",
+              "protected": "Marco de destino actual: .NETFramework,Version=v4.5.2\nMarco de destino recomendado: net10.0"
+            },
+            "kind": "File",
+            "path": "Common\\Common.csproj",
+            "snippet": "Marco de destino actual: .NETFramework,Version=v4.5.2\nMarco de destino recomendado: net10.0",
+            "protectedSnippet": "Marco de destino actual: .NETFramework,Version=v4.5.2\nMarco de destino recomendado: net10.0",
+            "properties": {
+              "CurrentTargetFramework": ".NETFramework,Version=v4.5.2",
+              "RecommendedTargetFramework": "net10.0"
+            }
+          }
+        },
+        {
+          "incidentId": "363f0740-385d-4461-9073-71332e4f4ed7",
+          "ruleId": "Binding.0004",
+          "projectPath": "Common\\Common.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "AutoGenerateBindingRedirects is not set in Common.csproj, no manual redirects found",
+              "protected": "AutoGenerateBindingRedirects is not set in Common.csproj, no manual redirects found"
+            },
+            "kind": "File",
+            "path": "Common\\Common.csproj",
+            "snippet": "AutoGenerateBindingRedirects is not set in Common.csproj, no manual redirects found",
+            "protectedSnippet": "AutoGenerateBindingRedirects is not set in Common.csproj, no manual redirects found"
+          }
+        }
+      ],
+      "features": []
+    }
+  ],
+  "rules": {
+    "Project.0001": {
+      "id": "Project.0001",
+      "isFeature": false,
+      "description": "El archivo de proyecto debe convertirse al estilo SDK. Los proyectos modernos de .NET Framework requieren un cambio en el formato de archivo del proyecto y usan el SDK correspondiente al tipo y la funcionalidad del proyecto.",
+      "label": "El archivo de proyecto debe convertirse al estilo SDK",
+      "severity": "Mandatory",
+      "effort": 1,
+      "links": [
+        {
+          "title": "Informaci\u00F3n general sobre la portabilidad de .NET Framework a .NET",
+          "url": "https://go.microsoft.com/fwlink/?linkid=2265227",
+          "isCustom": false
+        },
+        {
+          "title": "SDK de proyecto .NET",
+          "url": "https://go.microsoft.com/fwlink/?linkid=2265226",
+          "isCustom": false
+        }
+      ]
+    },
+    "Project.0002": {
+      "id": "Project.0002",
+      "isFeature": false,
+      "description": "El marco de destino del proyecto deben cambiarse al nuevo marco de destino que seleccion\u00F3 para esta actualizaci\u00F3n.\n\nDurante la actualizaci\u00F3n, el marco de destino se ajustar\u00E1 a la plataforma correspondiente cuando proceda. En algunos casos, el proyecto dar\u00EDa como resultado varios marcos de destino despu\u00E9s de la actualizaci\u00F3n si usara caracter\u00EDsticas que ahora tienen sus propias plataformas en marcos de .NET modernos (windows, iOS, Android, etc.).",
+      "label": "Es necesario cambiar el marco de destino del proyecto",
+      "severity": "Mandatory",
+      "effort": 1,
+      "links": [
+        {
+          "title": "Informaci\u00F3n general sobre la portabilidad de .NET Framework a .NET",
+          "url": "https://go.microsoft.com/fwlink/?linkid=2265227",
+          "isCustom": false
+        },
+        {
+          "title": "SDK de proyecto .NET",
+          "url": "https://go.microsoft.com/fwlink/?linkid=2265226",
+          "isCustom": false
+        }
+      ]
+    },
+    "Binding.0004": {
+      "id": "Binding.0004",
+      "isFeature": false,
+      "description": "AutoGenerateBindingRedirects is not set and no manual binding redirects were found. In some project types the default is false, leading to unpredictable behavior across different build environments or developer machines.",
+      "label": "AutoGenerateBindingRedirects not set and no manual redirects",
+      "severity": "Potential",
+      "effort": 1,
+      "links": [
+        {
+          "title": "Assembly binding redirection",
+          "url": "https://go.microsoft.com/fwlink/?linkid=2262689",
+          "isCustom": false
+        }
+      ]
+    }
+  }
+}

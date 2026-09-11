@@ -1090,6 +1090,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "frmClientes";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Lista de Clientes Corpoelec Carabobo";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmLocalidades_FormClosing);
             this.Load += new System.EventHandler(this.frmLocalidades_Load);

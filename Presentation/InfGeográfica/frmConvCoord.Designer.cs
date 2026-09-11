@@ -155,6 +155,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmConvCoord";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Conversor de Coordenadas";
             this.grpTipo.ResumeLayout(false);
             this.grpTipo.PerformLayout();

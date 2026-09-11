@@ -6,7 +6,7 @@ using NpgsqlTypes;
 using Npgsql;
 using System.Data;
 
-namespace DataAccess.PostgreSQL
+namespace Visoproy.DataAccess.PostgreSQL
 {
     public class TransfDao : ConnectionToPool
     {

@@ -6,7 +6,7 @@ using Npgsql;
 using NpgsqlTypes;
 using System.Globalization;
 
-namespace DataAccess.PostgreSQL
+namespace Visoproy.DataAccess.PostgreSQL
 {
     public class TreeviewDao : ConnectionToPool
     {

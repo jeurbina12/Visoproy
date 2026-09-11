@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Text;
 //using DataAccess;
 using Common.Cache;
-using DataAccess.PostgreSQL;
+using Visoproy.DataAccess.PostgreSQL;
 using System.Data;
 
 namespace Domain

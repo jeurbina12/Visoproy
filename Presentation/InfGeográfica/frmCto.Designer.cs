@@ -183,6 +183,7 @@
             // 
             // txtId
             // 
+            this.txtId.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtId.Name = "txtId";
             this.txtId.ReadOnly = true;
             this.txtId.Size = new System.Drawing.Size(40, 25);
@@ -196,6 +197,7 @@
             // 
             // txtNombre
             // 
+            this.txtNombre.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.ReadOnly = true;
             this.txtNombre.Size = new System.Drawing.Size(230, 25);
@@ -238,6 +240,7 @@
             this.tsbCadMostrar.Size = new System.Drawing.Size(23, 22);
             this.tsbCadMostrar.Text = "Ver Plano";
             this.tsbCadMostrar.ToolTipText = "Zoom en Plano CAD";
+            this.tsbCadMostrar.Click += new System.EventHandler(this.tsbCadMostrar_Click);
             // 
             // toolStripSeparator3
             // 
@@ -946,6 +949,7 @@
             // 
             // btnPerfil
             // 
+            this.btnPerfil.Enabled = false;
             this.btnPerfil.Location = new System.Drawing.Point(428, 23);
             this.btnPerfil.Name = "btnPerfil";
             this.btnPerfil.Size = new System.Drawing.Size(85, 31);
@@ -1291,6 +1295,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "frmCto";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Datos del Alimentador";
             this.Load += new System.EventHandler(this.frmCto_Load);
             this.ToolStrip1.ResumeLayout(false);

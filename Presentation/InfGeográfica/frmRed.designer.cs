@@ -409,6 +409,7 @@
             // 
             this.txtNFilaP1.AccessibleName = "Posición";
             this.txtNFilaP1.AutoSize = false;
+            this.txtNFilaP1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtNFilaP1.Name = "txtNFilaP1";
             this.txtNFilaP1.Size = new System.Drawing.Size(50, 21);
             this.txtNFilaP1.Text = "0";
@@ -686,6 +687,7 @@
             // 
             this.txtNFilaP2.AccessibleName = "Posición";
             this.txtNFilaP2.AutoSize = false;
+            this.txtNFilaP2.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtNFilaP2.Name = "txtNFilaP2";
             this.txtNFilaP2.Size = new System.Drawing.Size(50, 21);
             this.txtNFilaP2.Text = "0";
@@ -973,6 +975,7 @@
             // 
             this.txtNFilaP3.AccessibleName = "Posición";
             this.txtNFilaP3.AutoSize = false;
+            this.txtNFilaP3.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtNFilaP3.Name = "txtNFilaP3";
             this.txtNFilaP3.Size = new System.Drawing.Size(50, 21);
             this.txtNFilaP3.Text = "0";
@@ -1259,6 +1262,7 @@
             // 
             this.txtNFilaP4.AccessibleName = "Posición";
             this.txtNFilaP4.AutoSize = false;
+            this.txtNFilaP4.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtNFilaP4.Name = "txtNFilaP4";
             this.txtNFilaP4.Size = new System.Drawing.Size(50, 21);
             this.txtNFilaP4.Text = "0";
@@ -1316,6 +1320,7 @@
             this.Controls.Add(this.tabEditorArbol);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmRed";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Editor Esquema de la Red";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmRed_FormClosing);
             this.Load += new System.EventHandler(this.frmRed_Load);

@@ -401,6 +401,7 @@
             this.Controls.Add(this.lblMail);
             this.Controls.Add(this.lblTelef);
             this.Name = "frmLoginEditar";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Editar Perfil de Usuario";
             this.TransparencyKey = System.Drawing.Color.White;
             this.Load += new System.EventHandler(this.FormUserProfile_Load);

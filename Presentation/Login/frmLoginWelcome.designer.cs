@@ -134,7 +134,7 @@
             this.progressBar1.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
             this.progressBar1.TabIndex = 14;
             // 
-            // FormWelcome
+            // frmLoginWelcome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -146,7 +146,8 @@
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "FormWelcome";
+            this.Name = "frmLoginWelcome";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormWelcome";
             this.Load += new System.EventHandler(this.FormWelcome_Load);
             this.panel1.ResumeLayout(false);

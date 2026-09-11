@@ -1003,6 +1003,7 @@
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.tspBindingNavigatorCad);
             this.Name = "frmListas";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Lista de Instalaciones";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmListas_FormClosing);
             this.Load += new System.EventHandler(this.frmListas_Load);

@@ -144,6 +144,8 @@ namespace FormLogin
                 {
                     UserModel user = new UserModel();
                     var validLogin = user.LoginSelect(txtUser.Text, txtPass.Text);
+                    
+
                     if (validLogin == true)
                     {
                         load();

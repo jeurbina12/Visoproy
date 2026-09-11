@@ -70,7 +70,7 @@
             this.lblResult.TabIndex = 3;
             this.lblResult.Text = "Resultado";
             // 
-            // FormRecoverPassword
+            // frmLoginRecoverPassword
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -79,7 +79,8 @@
             this.Controls.Add(this.btnSend);
             this.Controls.Add(this.txtUserRequest);
             this.Controls.Add(this.label1);
-            this.Name = "FormRecoverPassword";
+            this.Name = "frmLoginRecoverPassword";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormRecoverPassword";
             this.ResumeLayout(false);
             this.PerformLayout();

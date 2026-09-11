@@ -166,7 +166,7 @@ namespace Presentation
             this.lblIp.TabIndex = 9;
             this.lblIp.Text = "Ip:";
             // 
-            // frmAcerca
+            // FrmAcerca
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -184,10 +184,10 @@ namespace Presentation
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "frmAcerca";
+            this.Name = "FrmAcerca";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "About";
             this.bottomPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.mainPicture)).EndInit();

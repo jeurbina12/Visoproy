@@ -456,7 +456,7 @@
             // mnuCoorDgsUtm
             // 
             this.mnuCoorDgsUtm.Name = "mnuCoorDgsUtm";
-            this.mnuCoorDgsUtm.Size = new System.Drawing.Size(258, 22);
+            this.mnuCoorDgsUtm.Size = new System.Drawing.Size(259, 22);
             this.mnuCoorDgsUtm.Text = "Convertir Coordenadas DGS a UTM";
             this.mnuCoorDgsUtm.Click += new System.EventHandler(this.mnuCoorDgsUtm_Click);
             // 
@@ -576,6 +576,7 @@
             // 
             // txtId
             // 
+            this.txtId.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtId.Name = "txtId";
             this.txtId.Size = new System.Drawing.Size(50, 23);
             // 
@@ -713,6 +714,7 @@
             // 
             this.bindingNavigatorPositionItem.AccessibleName = "Posición";
             this.bindingNavigatorPositionItem.AutoSize = false;
+            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
             this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 23);
             this.bindingNavigatorPositionItem.Text = "0";
@@ -772,35 +774,35 @@
             this.rbn1x});
             this.tsbCadMostrar.Image = global::Presentation.Properties.Resources.CadVer;
             this.tsbCadMostrar.Name = "tsbCadMostrar";
-            this.tsbCadMostrar.Size = new System.Drawing.Size(51, 22);
+            this.tsbCadMostrar.Size = new System.Drawing.Size(50, 22);
             this.tsbCadMostrar.Text = "5x";
             this.tsbCadMostrar.ButtonClick += new System.EventHandler(this.tsbCadMostrar_ButtonClick);
             // 
             // rbn4x
             // 
             this.rbn4x.Name = "rbn4x";
-            this.rbn4x.Size = new System.Drawing.Size(92, 22);
+            this.rbn4x.Size = new System.Drawing.Size(91, 22);
             this.rbn4x.Text = "20x";
             this.rbn4x.Click += new System.EventHandler(this.rbn4x_Click);
             // 
             // rbn3x
             // 
             this.rbn3x.Name = "rbn3x";
-            this.rbn3x.Size = new System.Drawing.Size(92, 22);
+            this.rbn3x.Size = new System.Drawing.Size(91, 22);
             this.rbn3x.Text = "15x";
             this.rbn3x.Click += new System.EventHandler(this.rbn3x_Click);
             // 
             // rbn2x
             // 
             this.rbn2x.Name = "rbn2x";
-            this.rbn2x.Size = new System.Drawing.Size(92, 22);
+            this.rbn2x.Size = new System.Drawing.Size(91, 22);
             this.rbn2x.Text = "10x";
             this.rbn2x.Click += new System.EventHandler(this.rbn2x_Click);
             // 
             // rbn1x
             // 
             this.rbn1x.Name = "rbn1x";
-            this.rbn1x.Size = new System.Drawing.Size(92, 22);
+            this.rbn1x.Size = new System.Drawing.Size(91, 22);
             this.rbn1x.Text = "5x";
             this.rbn1x.Click += new System.EventHandler(this.rbn1x_Click);
             // 
@@ -946,6 +948,7 @@
             // txtCodigo
             // 
             this.txtCodigo.AutoSize = false;
+            this.txtCodigo.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.Size = new System.Drawing.Size(70, 23);
             // 
@@ -982,6 +985,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "frmLocalidades";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Mantenimiento Tablas de Localidades";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmLocalidades_FormClosing);
             this.Load += new System.EventHandler(this.frmLocalidades_Load);

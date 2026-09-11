@@ -133,6 +133,7 @@
             // 
             // txtId
             // 
+            this.txtId.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtId.Name = "txtId";
             this.txtId.ReadOnly = true;
             this.txtId.Size = new System.Drawing.Size(40, 25);
@@ -146,6 +147,7 @@
             // 
             // txtNombre
             // 
+            this.txtNombre.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.ReadOnly = true;
             this.txtNombre.Size = new System.Drawing.Size(200, 25);
@@ -589,8 +591,8 @@
             // 
             // txtReferencia
             // 
-            this.txtReferencia.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtReferencia.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtReferencia.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtReferencia.Location = new System.Drawing.Point(4, 70);
             this.txtReferencia.MaxLength = 255;
@@ -781,6 +783,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "frmSub";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Actualizar datos de la Subestación";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmSub_FormClosing);
             this.Load += new System.EventHandler(this.frmSub_Load);

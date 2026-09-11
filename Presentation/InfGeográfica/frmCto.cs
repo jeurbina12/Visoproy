@@ -235,6 +235,8 @@ namespace Presentation.InfGeográfica
                 this.btnGuardar.Image = global::Presentation.Properties.Resources.page_save;
                 this.btnGuardar.Text = "Guardar";
 
+                btnPerfil.Enabled = true;
+
                 cbxCondScada.DropDownStyle = ComboBoxStyle.DropDown;
                 cbxCondición.DropDownStyle = ComboBoxStyle.DropDown;
                 cbxInterruptor.DropDownStyle = ComboBoxStyle.DropDown;
@@ -285,6 +287,8 @@ namespace Presentation.InfGeográfica
                 this.btnGuardar.Tag = null;
                 this.btnGuardar.Image = global::Presentation.Properties.Resources.page_edit;
                 this.btnGuardar.Text = "Editar";
+
+                btnPerfil.Enabled = false;
 
                 cbxCondScada.DropDownStyle = ComboBoxStyle.Simple;
                 cbxCondición.DropDownStyle = ComboBoxStyle.Simple;
@@ -733,7 +737,12 @@ namespace Presentation.InfGeográfica
         private void btnPerfil_Click(object sender, EventArgs e)
         {
             //cargar archivo PERFIL.CSV
-            string sPath = "C:\\PADEE\\TEMP\\";
+            //string sPath = "C:\\PADEE\\TEMP\\";
+            string sPath = @"E:/Sid/Información Geográfica/TEMP/";
+
+            System.Globalization.NumberFormatInfo formato = new System.Globalization.NumberFormatInfo();
+            formato.NumberDecimalSeparator = ".";
+
             string sFileName = sPath + "PERFIL.CSV";
             string linea;
             Single troncal = 0, ccond = 0, ct = 0;
@@ -754,12 +763,15 @@ namespace Presentation.InfGeográfica
                 FileStream fs = new FileStream(sFileName, FileMode.Open, FileAccess.Read, FileShare.Read);
                 StreamReader sr = new StreamReader(fs);
 
+               
+
                 linea = sr.ReadLine();
                 linea = sr.ReadLine();
 
                 elementos = linea.Split(delimiterChars);
 
-                amp = Convert.ToInt16(Single.Parse(elementos[5]));
+                //amp = Convert.ToInt16(Single.Parse(elementos[5]));
+                amp = Convert.ToInt16(Single.Parse(elementos[5], formato));
                 //troncal += Single.Parse(elementos[1]);
                 //ccond = Single.Parse(elementos[1]);
                 //ct = Single.Parse(elementos[6]);
@@ -768,16 +780,21 @@ namespace Presentation.InfGeográfica
                 {
                     elementos = linea.Split(delimiterChars);
 
-                    troncal += Single.Parse(elementos[1]);
+                    troncal += Single.Parse(elementos[1], formato);
 
-                    if (Single.Parse(elementos[3]) > ccond)
+                    if (Single.Parse(elementos[3], formato) > ccond)
                     {
-                        ccond = Single.Parse(elementos[3]);
+                        ccond = Single.Parse(elementos[3], formato);
                     }
 
-                    if (Single.Parse(elementos[6]) > ct)
+                    //if (Single.Parse(elementos[6], formato) > ct)
+                    //{
+                    //    ct = Single.Parse(elementos[6]);
+                    //}
+                    float valor = Single.Parse(elementos[6]) / 100;
+                    if (valor > ct)
                     {
-                        ct = Single.Parse(elementos[6]);
+                        ct = valor;
                     }
 
                     linea = sr.ReadLine();
@@ -868,17 +885,17 @@ namespace Presentation.InfGeográfica
                     elementos = linea.Split(delimiterChars);
                     if (elementos[0].Equals("TOTAL"))
                     {
-                        longitud = Convert.ToInt32(Single.Parse(elementos[1]) * 1000);
+                        longitud = Convert.ToInt32(Single.Parse(elementos[1], formato) * 1000);
 
                     }
                     else
                     {
-                        if (Convert.ToSingle(Single.Parse(elementos[8])) > 1)
+                        float valor = Single.Parse(elementos[8], formato);
+                        if (valor > 1)
                         {
-                            kva += Convert.ToSingle(Single.Parse(elementos[8]));
+                            kva += valor;
                             count += 1;
                         }
-
                     }
 
                     linea = sr.ReadLine();
@@ -981,9 +998,32 @@ namespace Presentation.InfGeográfica
                 }
         }
 
-        
+        private void tsbCadMostrar_Click(object sender, EventArgs e)
+        {
+            double[] SelXY = new double[2];
+            SelXY = new double[] { double.Parse(txtX.Text), double.Parse(txtY.Text) };
 
-       
+            if (SelXY[0].Equals(0) || SelXY[1].Equals(0))
+            {
+                System.Media.SystemSounds.Beep.Play();                
+                return;
+            }
 
+            Int16 _marcar = 0;
+
+            cadModel.CoordZoom(SelXY[0], SelXY[1], _marcar);
+
+
+            //if (cadModel.CoordZoom(SelXY[0], SelXY[1], _marcar))
+            //{
+            //    //node.BackColor = Color.Yellow;
+            //    if (mnuOrden.Checked == false)
+            //        this.WindowState = FormWindowState.Minimized;
+            //}
+            //else
+            //{
+            //    lblObs.Text = this.cadModel.MENSAJE;
+            //}
+        }
     }
 }
